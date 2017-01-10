@@ -25,6 +25,12 @@ let cities = promise.then((response) => {
       return -1;
     }
   });
+  
+  for(let i = 0; i < cities.length; i++) {
+    let div = document.createElement('div');
+    div.innerText = cities[i];
+    container.appendChild(div);
+  }
 
   function setCities() {
     input.addEventListener('keyup', (e) => {
